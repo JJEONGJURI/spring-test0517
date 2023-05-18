@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LoggingAspect {
-	final String publicMethod = "execution(public * test.Project.*(..))";
+	final String publicMethod = "execution(public * test..*(..))";
 	@Before(publicMethod)  
 	public void before() {
 		System.out.println("[LA] Before 메서드 실행 전 실행");
